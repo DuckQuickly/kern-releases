@@ -1,10 +1,16 @@
 # KERN — beta downloads
 
-Installer downloads for the KERN private beta. No source code is hosted here.
+### ⬇️ Download: **https://duckquickly.github.io/kern-releases**
 
-**Windows:** download the latest `KERN-Setup-<version>.exe` from
-[Releases](https://github.com/DuckQuickly/kern-releases/releases), run it, and
-if SmartScreen appears choose **More info → Run anyway** (the beta is unsigned).
+The download page auto-detects your Mac or PC and links the latest build. No source code is hosted here.
 
-Your data is stored in your user profile and survives updates — just run the
-newer installer.
+## Manual download
+
+Pick the latest asset from [Releases](https://github.com/DuckQuickly/kern-releases/releases):
+
+- **macOS** — `KERN-macOS-<version>.dmg`: open it, drag **KERN** to **Applications**, then first launch with **Control-click → Open → Open** (the beta is not notarized, so macOS warns once).
+- **Windows** — `KERN-Setup-<version>.exe`: run it; if SmartScreen appears choose **More info → Run anyway** (the beta is unsigned).
+
+Each installer has a matching `.sha256` checksum file.
+
+Your contacts, notes, and settings live outside the app and survive updates — just install the newer build.
