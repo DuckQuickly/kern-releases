@@ -102,7 +102,7 @@
         <svg viewBox="0 0 24 24"><path d="M3 5.5l7.5-1v7.2H3V5.5zm0 13l7.5 1v-7.1H3v6.1zM11.3 4.3L21 3v8.7h-9.7V4.3zm0 15.4L21 21v-8.6h-9.7v7.3z"/></svg>
         Windows<span class="best" id="best-win" hidden>Your device</span>
       </div>
-      <p class="card-note" id="note-win">Windows 10 or 11, 64-bit.</p>
+      <p class="card-note" id="note-win">Windows 10 or 11, 64-bit. Owner-approved beta testers only: this installer is not code-signed.</p>
       <a class="btn download" id="dl-win" href="#" aria-disabled="true">Checking…</a>
       <div class="checksum" id="sha-win"></div>
     </div>
@@ -114,7 +114,7 @@
       <ol>
         <li>Open the downloaded <code>.dmg</code>.</li>
         <li>Drag <strong>KERN</strong> onto the <strong>Applications</strong> folder.</li>
-        <li>First launch: <strong>Control-click KERN → Open → Open</strong>. macOS warns because the beta is not notarized — this is expected and only needed once.</li>
+        <li>Open KERN normally. Published builds are signed with a Developer ID and notarized by Apple. If macOS shows a warning anyway, do not open it and tell the owner.</li>
         <li>After that, KERN updates itself; your contacts, notes, and settings live outside the app and carry over.</li>
       </ol>
     </details>
@@ -122,7 +122,7 @@
       <summary>Installing on Windows <span class="chev">›</span></summary>
       <ol>
         <li>Run the downloaded <code>.exe</code>.</li>
-        <li>If SmartScreen appears: <strong>More info → Run anyway</strong> (the beta is unsigned).</li>
+        <li>Windows will say the publisher is unknown, because this beta installer is not code-signed. If the owner has not approved you for the Windows beta, do not install it.</li>
         <li>Your data is stored in your user profile and survives updates — just run the newer installer.</li>
       </ol>
     </details>
