@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Datenschutzerklärung – KERN</title>
+<style>
+  :root {
+    --bg: #faf8f3; --surface: #fffdf8; --border: #e7e0d2;
+    --text: #2b2620; --muted: #8a8172; --accent: #4a7c59; --accent-dark: #3a6347;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #201d16; --border: #35301f;
+      --text: #ece6d8; --muted: #9a9080; --accent: #7bb389; --accent-dark: #6aa478;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 64px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 15px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .mark span { width: 16px; height: 16px; border-radius: 4px; background: rgba(255,255,255,.85); }
+  h1 { font-size: 30px; letter-spacing: 4px; font-weight: 800; margin: 0 0 6px; }
+  .tagline { color: var(--muted); font-size: 15px; margin: 0; }
+  .version { display: inline-block; margin-top: 14px; font-size: 12.5px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 28px; }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card.primary { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent), var(--shadow); }
+  .card-os { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .card-os svg { width: 22px; height: 22px; fill: var(--text); }
+  .card-note { color: var(--muted); font-size: 13px; margin: 0 0 16px; min-height: 36px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 12px 16px; border-radius: 11px; transition: transform .08s, background .15s, opacity .15s;
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.download { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn.download:hover { background: var(--accent-dark); }
+  .btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  .best { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--accent); margin-left: auto; }
+  [hidden] { display: none !important; }
+  .checksum { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; word-break: break-all; }
+  .steps { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 4px 22px; box-shadow: var(--shadow); }
+  details { border-bottom: 1px solid var(--border); }
+  details:last-child { border-bottom: none; }
+  summary { cursor: pointer; padding: 16px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { margin-left: auto; transition: transform .15s; color: var(--muted); }
+  details[open] summary .chev { transform: rotate(90deg); }
+  .steps ol { margin: 0 0 18px; padding-left: 20px; color: var(--text); }
+  .steps li { margin-bottom: 8px; }
+  .steps code { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+  .foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 30px; line-height: 1.7; }
+  .foot a { color: var(--accent); text-decoration: none; }
+  .warn { background: color-mix(in srgb, #b7892a 12%, var(--surface)); border: 1px solid color-mix(in srgb, #b7892a 35%, var(--border));
+    color: var(--text); border-radius: 12px; padding: 12px 16px; font-size: 13px; margin-bottom: 24px; }
+
+.wrap{padding-top:32px} .legal h1{font-size:26px;letter-spacing:0} .legal h2{font-size:19px;margin-top:28px} .legal nav{font-size:13px;color:var(--muted);margin-top:40px;line-height:2} .legal a{color:var(--accent-dark)}</style></head>
+<body><div class="wrap legal"><p><a href="../index.html">← KERN</a></p>
+<h1>Datenschutzerklärung für KERN</h1>
+<p><em>(Entwurf, Stand 07.10.2026. Nicht veröffentlichen, bevor Platzhalter und [PRÜFEN]-Hinweise erledigt sind.)</em></p>
+<h2>1. Verantwortlicher</h2>
+<p>[NAME], [ANSCHRIFT], E-Mail: [E-MAIL]. (Siehe auch das Impressum.)</p>
+<h2>2. Das Wichtigste in Kürze</h2>
+<ul>
+<li><strong>KERN arbeitet lokal.</strong> Ihre Kontakte, E-Mail-Inhalte, Notizen und Einstellungen liegen in einer Datenbank auf Ihrem Computer. Ich betreibe keinen Server, der diese Inhalte erhält, und ich habe keinen Zugriff darauf.</li>
+<li><strong>Ich erhebe keine Nutzungsstatistiken und keine Absturzberichte.</strong> KERN enthält keine Telemetrie.</li>
+<li><strong>Ich verarbeite nur:</strong> Kauf- und Rechnungsdaten, Daten für die Lizenzprüfung, die technischen Daten beim Herunterladen und bei der Update-Prüfung sowie Ihre Nachrichten an mich.</li>
+<li><strong>Verbindungen, die Sie selbst einrichten</strong> (E-Mail-Konten, KI-Anbieter, Todoist, Pushover, Kalender), gehen direkt von Ihrem Computer zu diesen Anbietern. Dafür bin ich nicht verantwortlich, sie sind aber in Abschnitt 5 erklärt.</li>
+</ul>
+<h2>3. Welche Daten ich verarbeite</h2>
+<h3>3.1 Webseite und Download</h3>
+<p>Die Download-Seite wird über GitHub Pages bereitgestellt, die Installationsdateien über GitHub Releases. Beim Aufruf verarbeitet GitHub technische Daten wie Ihre IP-Adresse und Browserangaben. Auf der Seite werden keine Cookies gesetzt und keine Analysewerkzeuge eingesetzt. Die Seite fragt beim Laden bei der GitHub-API die neueste Version ab; dabei wird Ihre IP-Adresse an GitHub übermittelt.</p>
+<ul>
+<li>Zweck: Bereitstellung der Seite und der Downloads.</li>
+<li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Interesse am sicheren Bereitstellen der Software).</li>
+<li>Empfänger: GitHub Inc. / Microsoft (USA), siehe Abschnitt 6 und 7. Es gelten dessen Datenschutzhinweise.</li>
+</ul>
+<h3>3.2 Kauf, Rechnung, Zahlung</h3>
+<p>Name, E-Mail-Adresse, Rechnungsanschrift, Kaufdatum, Preis, Zahlungsart und Referenz der Zahlung. [ZAHLUNGSART: bei Überweisung nur Bankdaten aus dem Zahlungseingang; bei einem Zahlungsdienstleister dessen Angaben ergänzen.]</p>
+<ul>
+<li>Zweck: Vertragserfüllung, Rechnungsstellung, Buchführung.</li>
+<li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertrag) und lit. c (gesetzliche Aufbewahrung nach Handels- und Steuerrecht).</li>
+<li>Speicherdauer: Rechnungen und Buchungsbelege werden entsprechend den gesetzlichen Fristen aufbewahrt (derzeit in der Regel acht Jahre, bei Büchern zehn Jahre). [PRÜFEN: aktuelle Fristen mit dem Steuerberater bestätigen]</li>
+</ul>
+<h3>3.3 Lizenzprüfung (Lizenzserver)</h3>
+<p>Beim Aktivieren und danach in regelmäßigen Abständen (etwa alle 72 Stunden bei bestehender Internetverbindung) meldet KERN sich bei meinem Lizenzserver. Dabei werden verarbeitet:</p>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aktivierungscode</td>
+<td>Zuordnung zu Ihrer Lizenz</td>
+</tr>
+<tr>
+<td>Name des Lizenzinhabers (wie bei der Aktivierung angegeben)</td>
+<td>Zuordnung und Support</td>
+</tr>
+<tr>
+<td>Gerätekennung (zufällige ID, die KERN anlegt)</td>
+<td>Begrenzung auf die gekaufte Gerätezahl</td>
+</tr>
+<tr>
+<td>Gerätebezeichnung</td>
+<td>Unterscheidung mehrerer Geräte. [PRÜFEN: Nach der geplanten Änderung gibt der Nutzer die Bezeichnung selbst ein; bisher wird der Computername übernommen]</td>
+</tr>
+<tr>
+<td>Kennung der Hardware als Hash</td>
+<td>Verhindert, dass eine Aktivierung auf einen anderen Rechner kopiert wird. [PRÜFEN: Bestätigen, dass es sich um einen nicht umkehrbaren, gesalzenen Hash handelt]</td>
+</tr>
+<tr>
+<td>KERN-Version</td>
+<td>Support und Hinweise auf veraltete Versionen</td>
+</tr>
+<tr>
+<td>Zeitpunkt jeder Prüfung</td>
+<td>Gültigkeitsprüfung</td>
+</tr>
+<tr>
+<td>IP-Adresse (in Zugriffsprotokollen des Hosters)</td>
+<td>Betrieb und Missbrauchsschutz</td>
+</tr>
+</tbody>
+</table>
+<p>Es werden <strong>keine Inhalte</strong> aus KERN übertragen, also keine Kontakte, E-Mails, Notizen oder Einstellungen.</p>
+<ul>
+<li>Zweck: Durchsetzung der Lizenz und Schutz vor Mehrfachnutzung.</li>
+<li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (die Prüfung gehört zur gekauften Leistung) und lit. f (Schutz vor unberechtigter Weitergabe).</li>
+<li>Speicherdauer: Aktivierungsdaten bis [90] Tage nach Ablauf der Lizenz, Prüfprotokolle [90] Tage, Serverprotokolle des Hosters [PRÜFEN: tatsächliche Dauer bei Fly.io] Tage. Danach werden sie gelöscht. [PRÜFEN: Diese Fristen werden erst mit der geplanten Änderung am Lizenzserver umgesetzt]</li>
+<li>Empfänger: Fly.io, Inc. als Hosting-Dienstleister (Rechenzentrum Frankfurt am Main), siehe Abschnitte 6 und 7.</li>
+</ul>
+<p>Sie können KERN weiter nutzen, wenn die Prüfung kurzzeitig scheitert. Nach Ablauf der Offline-Frist (derzeit 14 Tage) verlangt KERN eine erfolgreiche Prüfung.</p>
+<h3>3.4 Update-Prüfung</h3>
+<p>KERN fragt regelmäßig bei GitHub (api.github.com) an, ob eine neue Version vorliegt, und lädt sie bei Bedarf von github.com herunter. GitHub sieht dabei Ihre IP-Adresse. Ich erhalte diese Anfragen nicht. KERN prüft heruntergeladene Updates anhand einer digitalen Signatur, bevor es sie installiert. [PRÜFEN: erst wahr, wenn die Signaturprüfung im Updater umgesetzt ist]</p>
+<ul>
+<li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung von Updates im Rahmen der Lizenz) und lit. f (Sicherheit).</li>
+<li>Sie können die automatische Prüfung in den Einstellungen abschalten. [PRÜFEN: Einstellung vorhanden?]</li>
+</ul>
+<h3>3.5 Kommunikation und Support</h3>
+<p>Wenn Sie mir schreiben, verarbeite ich Ihre Nachricht und Ihre Kontaktdaten, um sie zu beantworten. Wenn Sie ein Support-Paket aus KERN ("Health, Export support bundle") senden, enthält es technische Informationen zu Ihrer Installation. Es enthält: Programmversion und Build, Betriebssystem, den Ordnerpfad der Installation (der Benutzername-Anteil wird entfernt), die E-Mail-Adressen Ihrer eigenen verbundenen Postfächer, Zählwerte (z. B. Anzahl Kontakte), Einstellungen zu Benachrichtigungen und Kalender-ID, den Lizenzstatus sowie die Angabe, in welchen Schritten der letzten Programmläufe Probleme gemeldet wurden (nur Kategorie; Fehlertexte werden entfernt). Es enthält keine Kontaktdaten, keine E-Mail-Inhalte, keine privaten Notizen, keine API-Schlüssel und keine Anmelde-Token. Bitte prüfen Sie das Paket vor dem Senden.</p>
+<ul>
+<li>Rechtsgrundlage: Art. 6 Abs. 1 lit. b und lit. f DSGVO.</li>
+<li>Speicherdauer: bis zur Erledigung der Anfrage, danach höchstens [12] Monate, sofern keine gesetzliche Pflicht entgegensteht.</li>
+</ul>
+<h2>4. Was auf Ihrem Gerät bleibt</h2>
+<p>KERN speichert lokal: Kontakte, Aliase, E-Mail-Verläufe und -Inhalte (je nach Ihren Einstellungen), Notizen, Bewerbungs- und Ereignisdaten, Aufgaben, KI-Zwischenspeicher, Zugangsdaten (im Schlüsselbund von macOS bzw. im Windows-Speicher für Zugangsdaten) und Ihre Einstellungen. Diese Daten verlassen Ihr Gerät nur auf Wegen, die Sie in KERN selbst aktivieren (Abschnitt 5) oder wenn Sie Inhalte kopieren, exportieren oder ein Backup an einen anderen Ort legen. KERN bietet Funktionen zum Export, zum Löschen einzelner Daten und zum vollständigen Entfernen der lokalen Daten.</p>
+<h2>5. Verbindungen, die Sie selbst einrichten</h2>
+<p>Für diese Verarbeitung entscheiden Sie über Zweck und Mittel. Sie schließen die Verträge mit den Anbietern selbst. Ich erhalte die Daten nicht.</p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Wohin die Daten gehen</th>
+<th>Hinweis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-Mail-Konto (Gmail über Ihre eigenen Zugangsdaten, Microsoft 365, IMAP)</td>
+<td>Direkt zwischen Ihrem Computer und Ihrem E-Mail-Anbieter</td>
+<td>KERN liest standardmäßig nur und sendet nie selbst E-Mails. Entwürfe entstehen nur auf ausdrückliche Anforderung.</td>
+</tr>
+<tr>
+<td>KI-Anbieter (Google Gemini, OpenRouter, Anthropic) mit <strong>Ihrem</strong> API-Schlüssel</td>
+<td>Direkt von Ihrem Computer zum gewählten Anbieter</td>
+<td>Standardmäßig ist <strong>kein</strong> Anbieter aktiv, KERN erzeugt dann nur Texte zum Kopieren. Wenn Sie einen Anbieter aktivieren, kann der Inhalt von E-Mails, Notizen und Kontaktangaben an diesen Anbieter gehen. Aufbewahrung, Auswertung und Verarbeitungsort bestimmen die Bedingungen des Anbieters, nicht KERN. Bei der kostenlosen Nutzung von Google Gemini außerhalb des EWR, des Vereinigten Königreichs und der Schweiz darf Google Inhalte nach seinen Bedingungen zur Produktverbesserung nutzen und von Menschen prüfen lassen. OpenRouter leitet Anfragen an weitere Modellanbieter mit eigenen Bedingungen weiter.</td>
+</tr>
+<tr>
+<td>Todoist, Pushover, Google Kalender</td>
+<td>Direkt zum jeweiligen Dienst mit Ihrem Konto</td>
+<td>Aufgabentexte oder Termine können Namen Ihrer Kontakte enthalten.</td>
+</tr>
+<tr>
+<td>Kopier-Modus für KI</td>
+<td>Nirgendwohin, bis Sie selbst einfügen</td>
+<td>Der kopierte Text kann personenbezogene Daten enthalten.</td>
+</tr>
+<tr>
+<td>Fernzugriff und Agenten-Schnittstelle (falls von Ihnen aktiviert)</td>
+<td>An die Geräte oder Programme, die Sie autorisieren</td>
+<td>Nutzt ein autorisiertes Programm ein Cloud-Modell, verlassen Daten Ihr Gerät.</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Empfänger und Auftragsverarbeiter</h2>
+<ul>
+<li><strong>Fly.io, Inc.</strong> (Hosting des Lizenzservers, Region Frankfurt). [PRÜFEN: Auftragsverarbeitungsvertrag abgeschlossen, aktuelle Unterauftragsverarbeiter und Übermittlungsgrundlage prüfen]</li>
+<li><strong>GitHub Inc. / Microsoft</strong> (Webseite, Downloads, Update-Prüfung). GitHub handelt für seine Server-Protokolle in eigener Verantwortung. [PRÜFEN: GitHub-Bedingungen]</li>
+<li><strong>[Zahlungsdienstleister]</strong>, falls verwendet. [PRÜFEN]</li>
+<li><strong>Steuerberater</strong>, soweit für die Buchführung nötig.</li>
+<li><strong>E-Mail-Anbieter</strong> von [E-MAIL].</li>
+</ul>
+<p>Eine Weitergabe zu Werbezwecken findet nicht statt.</p>
+<h2>7. Übermittlung in Drittländer</h2>
+<p>Fly.io und GitHub sind Unternehmen mit Sitz in den USA. Eine Übermittlung stützt sich auf [PRÜFEN: Angemessenheitsbeschluss zum EU-US Data Privacy Framework bei zertifizierten Anbietern, sonst Standardvertragsklauseln]. Der Lizenzserver läuft in Frankfurt am Main. Daten, die Sie an KI-Anbieter, Todoist oder andere Dienste senden, unterliegen deren Bedingungen und Standorten.</p>
+<h2>8. Ihre Rechte</h2>
+<p>Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitung auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Schreiben Sie dafür an [E-MAIL]. Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei [AUFSICHTSBEHÖRDE meines Bundeslandes].</p>
+<h2>9. Erforderlichkeit, automatisierte Entscheidungen</h2>
+<p>Aktivierungscode und Lizenzprüfung sind für die Nutzung der gekauften Lizenz erforderlich. Ohne sie kann ich die Leistung nicht erbringen. Es gibt keine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO.</p>
+<h2>10. Ihre Kontakte und andere Personen</h2>
+<p>Wenn Sie in KERN Daten über andere Personen speichern (Kontakte, E-Mail-Inhalte, Notizen), entscheiden Sie als Nutzer, wozu Sie diese verwenden. Bei beruflicher oder geschäftlicher Nutzung können Sie als Verantwortlicher eigene Pflichten nach der DSGVO haben, zum Beispiel Informationspflichten gegenüber den betroffenen Personen. Ich habe auf diese Daten keinen Zugriff und bin dafür weder Verantwortlicher noch Auftragsverarbeiter. KERN versendet nie selbst E-Mails; die rechtlichen Anforderungen an Ihre Ansprache von Personen (zum Beispiel Einwilligung bei Werbe-E-Mails) beachten Sie bitte selbst.</p>
+<h2>11. Änderungen</h2>
+<p>Ich passe diese Erklärung an, wenn sich KERN oder die Rechtslage ändert. Die jeweils aktuelle Fassung finden Sie auf der Download-Seite. Stand: [DATUM].</p>
+<nav><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="privacy.html">Privacy policy</a> · <a href="agb.html">Nutzungsbedingungen</a> · <a href="terms.html">Terms of use</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="withdrawal.html">Right of withdrawal</a><br><a href="../SECURITY.md">Security policy</a></nav></div></body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Terms of use – KERN</title>
+<style>
+  :root {
+    --bg: #faf8f3; --surface: #fffdf8; --border: #e7e0d2;
+    --text: #2b2620; --muted: #8a8172; --accent: #4a7c59; --accent-dark: #3a6347;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #201d16; --border: #35301f;
+      --text: #ece6d8; --muted: #9a9080; --accent: #7bb389; --accent-dark: #6aa478;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 64px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 15px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .mark span { width: 16px; height: 16px; border-radius: 4px; background: rgba(255,255,255,.85); }
+  h1 { font-size: 30px; letter-spacing: 4px; font-weight: 800; margin: 0 0 6px; }
+  .tagline { color: var(--muted); font-size: 15px; margin: 0; }
+  .version { display: inline-block; margin-top: 14px; font-size: 12.5px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 28px; }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card.primary { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent), var(--shadow); }
+  .card-os { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .card-os svg { width: 22px; height: 22px; fill: var(--text); }
+  .card-note { color: var(--muted); font-size: 13px; margin: 0 0 16px; min-height: 36px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 12px 16px; border-radius: 11px; transition: transform .08s, background .15s, opacity .15s;
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.download { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn.download:hover { background: var(--accent-dark); }
+  .btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  .best { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--accent); margin-left: auto; }
+  [hidden] { display: none !important; }
+  .checksum { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; word-break: break-all; }
+  .steps { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 4px 22px; box-shadow: var(--shadow); }
+  details { border-bottom: 1px solid var(--border); }
+  details:last-child { border-bottom: none; }
+  summary { cursor: pointer; padding: 16px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { margin-left: auto; transition: transform .15s; color: var(--muted); }
+  details[open] summary .chev { transform: rotate(90deg); }
+  .steps ol { margin: 0 0 18px; padding-left: 20px; color: var(--text); }
+  .steps li { margin-bottom: 8px; }
+  .steps code { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+  .foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 30px; line-height: 1.7; }
+  .foot a { color: var(--accent); text-decoration: none; }
+  .warn { background: color-mix(in srgb, #b7892a 12%, var(--surface)); border: 1px solid color-mix(in srgb, #b7892a 35%, var(--border));
+    color: var(--text); border-radius: 12px; padding: 12px 16px; font-size: 13px; margin-bottom: 24px; }
+
+.wrap{padding-top:32px} .legal h1{font-size:26px;letter-spacing:0} .legal h2{font-size:19px;margin-top:28px} .legal nav{font-size:13px;color:var(--muted);margin-top:40px;line-height:2} .legal a{color:var(--accent-dark)}</style></head>
+<body><div class="wrap legal"><p><a href="../index.html">← KERN</a></p>
+<h1>KERN terms of sale and licence (consumers)</h1>
+<p><em>(Draft, 7 Oct 2026. English translation for convenience; the German version is binding. Have a German lawyer or maintained legal-text service review before first use. Resolve placeholders and [CHECK] notes.)</em></p>
+<h2>1. Scope and parties</h2>
+<p>1.1 These terms apply to buying and using a licence for the software KERN (an app for macOS and Windows for managing professional relationships, "KERN") between [NAME], [ADDRESS] ("Provider") and you as a consumer ("you").</p>
+<p>1.2 The contract is open to people aged 18 or over. Sales to businesses are not made under these terms.</p>
+<p>1.3 Your own conflicting terms do not apply.</p>
+<h2>2. Subject matter and beta status</h2>
+<p>2.1 For the term in section 5 the Provider grants you a non-exclusive, non-transferable right to install and use KERN on [one] device for your own purposes, and provides updates during the term.</p>
+<p>2.2 KERN is under active development. Features may change as long as the agreed properties in section 3 and your rights in section 9 are not affected.</p>
+<h2>3. Agreed properties</h2>
+<p>3.1 The software runs locally on your device. The Provider has no access to your data. AI features are optional and use your own accounts with third-party providers.</p>
+<p>3.2 <strong>Expressly agreed, because they differ from what is usual for software of this kind (section 327h German Civil Code):</strong>
+- The Microsoft 365 connection uses Exchange Web Services (EWS). Microsoft is switching it off in Exchange Online in phases from 1 October 2026 and retires it permanently on 1 April 2027. The connection may stop working in your organisation earlier, or at the latest from that date. The Provider will try to offer a replacement but does not owe one. [CHECK: update when a replacement exists]
+- Connections to email services, AI providers, Todoist, Pushover and calendars depend on third-party services whose terms and interfaces can change.
+- The installers are not signed with a paid developer certificate from Apple or Microsoft, so your operating system shows a warning. KERN verifies updates with its own digital signature. [CHECK: include only once signature verification is built]</p>
+<p>3.3 To the extent you have agreed to them, the points in 3.2 count as agreed. Your statutory rights for defects otherwise remain unaffected.</p>
+<h2>4. Contract formation</h2>
+<p>4.1 The presentation on the website is not a binding offer. By clicking "Order with obligation to pay" you make a binding offer. The contract is formed when the Provider emails you the activation code or confirms the order.</p>
+<p>4.2 The contract language is German. The English translation is informational only.</p>
+<p>4.3 The Provider sends you these terms and the withdrawal information with the confirmation in text form. Please keep them.</p>
+<h2>5. Term, price, payment</h2>
+<p>5.1 Price: [PRICE] for a term of [12 months] from activation. [If Kleinunternehmer:] No VAT is charged under section 19 of the German VAT Act. [Otherwise: The price includes statutory VAT.]</p>
+<p>5.2 Payment: [PAYMENT METHOD]. Payment is due at contract formation.</p>
+<p>5.3 <strong>The licence does not renew automatically.</strong> It ends at the end of the term without you having to cancel. Renewal is a new purchase.</p>
+<p>5.4 The Provider may block the licence for good cause, in particular if the activation code is shared beyond the agreed number of devices or the payment is charged back. The Provider tells you the reason and, where reasonable, gives you a chance to respond first. Your statutory right to terminate for good cause is unaffected.</p>
+<h2>6. Activation and checks</h2>
+<p>6.1 You need the activation code to use KERN. On activation and about every 72 hours afterwards KERN checks online that the licence is valid. Without a successful check KERN keeps working offline for at most 14 days.</p>
+<p>6.2 The data listed in the privacy policy is transmitted, but no content from KERN.</p>
+<p>6.3 The number of devices is limited to [one]. If you change device, the Provider resets the binding on request.</p>
+<h2>7. After expiry and termination</h2>
+<p>7.1 After the term ends your data stays on your device. After the licence has ended, KERN stays locked, but the unlock screen lets you download one final copy of your data. Any further use of KERN (viewing, import, AI features, updates) needs a valid licence. [Implemented in PR #141: final export from the unlock screen.]</p>
+<p>7.2 Back up your data regularly. KERN makes a backup at version changes but does not replace your own backup.</p>
+<h2>8. Your responsibilities</h2>
+<p>8.1 You are responsible for the data you store in KERN and for the lawfulness of how you contact people. KERN never sends email itself. Do not use KERN for unlawful advertising, harassment or surveillance.</p>
+<p>8.2 If you use KERN professionally or commercially you may have data protection duties toward your contacts (see the privacy policy, section 10).</p>
+<p>8.3 You manage your own credentials and API keys for third-party services. The respective provider is responsible for the costs and terms of those services.</p>
+<p>8.4 The activation code is for you only. Sharing, renting out or reselling it is not allowed.</p>
+<h2>9. Statutory warranty</h2>
+<p>The statutory rules for contracts for digital products apply (sections 327 ff. German Civil Code). During the term the Provider supplies the updates needed to keep the product in conformity. You must install provided updates within a reasonable time; if you do not, the Provider is not liable for resulting defects, provided it told you about the update and the consequences. Support is by email to [EMAIL], where possible within [five] working days.</p>
+<h2>10. Liability</h2>
+<p>10.1 The Provider is liable without limit for intent and gross negligence, injury to life, body or health, under the Product Liability Act, for fraudulent concealment of a defect and where it has given a guarantee.</p>
+<p>10.2 For simple negligence the Provider is liable only for breach of an essential contractual obligation (one whose fulfilment makes proper performance possible in the first place and on which you can regularly rely), and then limited to the typical damage foreseeable at contract formation.</p>
+<p>10.3 For data loss the Provider is liable under 10.2 only up to the effort that would have been needed to restore the data had you made regular, risk-appropriate backups.</p>
+<p>10.4 Sections 10.1 to 10.3 also apply to employees and agents. Mandatory statutory liability is unaffected.</p>
+<h2>11. Open-source components</h2>
+<p>KERN includes open-source components under their own licences. The notices are in the app under "Open-source licences". These terms do not limit your rights under those licences.</p>
+<h2>12. Right of withdrawal</h2>
+<p>As a consumer you have a right of withdrawal. See the withdrawal information for details. For digital content it expires under the conditions stated there.</p>
+<h2>13. Governing law and jurisdiction</h2>
+<p>13.1 German law applies, excluding the UN Convention on Contracts for the International Sale of Goods. Mandatory consumer protection rules of the country where you habitually live remain unaffected.</p>
+<p>13.2 Statutory jurisdiction in your favour remains unaffected.</p>
+<p>13.3 The EU online dispute resolution platform has been closed. The Provider is neither obliged nor willing to take part in consumer arbitration. [Optional, see Impressum]</p>
+<h2>14. Final provisions</h2>
+<p>If a provision is invalid the rest of the contract remains valid and the statute applies. The Provider may change these terms for running contracts only with your consent. New purchases are governed by the version current at the time.</p>
+<p>As of: [DATE]</p>
+<nav><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="privacy.html">Privacy policy</a> · <a href="agb.html">Nutzungsbedingungen</a> · <a href="terms.html">Terms of use</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="withdrawal.html">Right of withdrawal</a><br><a href="../SECURITY.md">Security policy</a></nav></div></body></html>
