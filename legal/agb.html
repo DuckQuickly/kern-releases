@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Nutzungsbedingungen – KERN</title>
+<style>
+  :root {
+    --bg: #faf8f3; --surface: #fffdf8; --border: #e7e0d2;
+    --text: #2b2620; --muted: #8a8172; --accent: #4a7c59; --accent-dark: #3a6347;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #201d16; --border: #35301f;
+      --text: #ece6d8; --muted: #9a9080; --accent: #7bb389; --accent-dark: #6aa478;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 64px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 15px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .mark span { width: 16px; height: 16px; border-radius: 4px; background: rgba(255,255,255,.85); }
+  h1 { font-size: 30px; letter-spacing: 4px; font-weight: 800; margin: 0 0 6px; }
+  .tagline { color: var(--muted); font-size: 15px; margin: 0; }
+  .version { display: inline-block; margin-top: 14px; font-size: 12.5px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 28px; }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card.primary { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent), var(--shadow); }
+  .card-os { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .card-os svg { width: 22px; height: 22px; fill: var(--text); }
+  .card-note { color: var(--muted); font-size: 13px; margin: 0 0 16px; min-height: 36px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 12px 16px; border-radius: 11px; transition: transform .08s, background .15s, opacity .15s;
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.download { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn.download:hover { background: var(--accent-dark); }
+  .btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  .best { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--accent); margin-left: auto; }
+  [hidden] { display: none !important; }
+  .checksum { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; word-break: break-all; }
+  .steps { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 4px 22px; box-shadow: var(--shadow); }
+  details { border-bottom: 1px solid var(--border); }
+  details:last-child { border-bottom: none; }
+  summary { cursor: pointer; padding: 16px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { margin-left: auto; transition: transform .15s; color: var(--muted); }
+  details[open] summary .chev { transform: rotate(90deg); }
+  .steps ol { margin: 0 0 18px; padding-left: 20px; color: var(--text); }
+  .steps li { margin-bottom: 8px; }
+  .steps code { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+  .foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 30px; line-height: 1.7; }
+  .foot a { color: var(--accent); text-decoration: none; }
+  .warn { background: color-mix(in srgb, #b7892a 12%, var(--surface)); border: 1px solid color-mix(in srgb, #b7892a 35%, var(--border));
+    color: var(--text); border-radius: 12px; padding: 12px 16px; font-size: 13px; margin-bottom: 24px; }
+
+.wrap{padding-top:32px} .legal h1{font-size:26px;letter-spacing:0} .legal h2{font-size:19px;margin-top:28px} .legal nav{font-size:13px;color:var(--muted);margin-top:40px;line-height:2} .legal a{color:var(--accent-dark)}</style></head>
+<body><div class="wrap legal"><p><a href="../index.html">← KERN</a></p>
+<h1>Allgemeine Geschäftsbedingungen und Lizenzbedingungen für KERN (Verbraucher)</h1>
+<p><em>(Entwurf, Stand 07.10.2026. Vor der ersten Nutzung von einem Anwalt oder einem gepflegten Rechtstexte-Dienst prüfen lassen. Platzhalter und [PRÜFEN]-Hinweise erledigen.)</em></p>
+<h2>1. Geltungsbereich und Vertragspartner</h2>
+<p>1.1 Diese Bedingungen gelten für den Kauf und die Nutzung einer Lizenz für die Software KERN (Anwendung für macOS und Windows zur Verwaltung beruflicher Beziehungen, "KERN") zwischen [NAME], [ANSCHRIFT] ("Anbieter") und Ihnen als Verbraucher im Sinne des § 13 BGB ("Sie").</p>
+<p>1.2 Der Vertrag steht Personen ab 18 Jahren offen. Ein Verkauf an Unternehmer erfolgt nicht nach diesen Bedingungen.</p>
+<p>1.3 Abweichende Bedingungen von Ihnen gelten nicht.</p>
+<h2>2. Vertragsgegenstand und Beta-Status</h2>
+<p>2.1 Der Anbieter überlässt Ihnen für die Laufzeit nach Ziffer 5 ein einfaches, nicht übertragbares Recht, KERN auf [einem] Gerät für Ihre eigenen Zwecke zu installieren und zu nutzen, und stellt Updates für die Laufzeit bereit.</p>
+<p>2.2 KERN befindet sich in der Weiterentwicklung. Funktionen können sich ändern, solange das die vereinbarte Beschaffenheit nach Ziffer 3 und Ihre Rechte nach Ziffer 9 nicht beeinträchtigt.</p>
+<h2>3. Vereinbarte Beschaffenheit</h2>
+<p>3.1 Die Software arbeitet lokal auf Ihrem Gerät. Der Anbieter hat auf Ihre Daten keinen Zugriff. KI-Funktionen sind optional und verwenden Ihre eigenen Zugänge zu Drittanbietern.</p>
+<p>3.2 <strong>Ausdrücklich vereinbart, weil abweichend von dem, was bei Software dieser Art sonst üblich ist (§ 327h BGB):</strong>
+- Der Microsoft-365-Anschluss nutzt die Schnittstelle Exchange Web Services (EWS). Microsoft schaltet diese für Exchange Online seit dem 1. Oktober 2026 schrittweise ab und stellt sie am 1. April 2027 endgültig ein. Der Anschluss kann daher in Ihrer Organisation schon früher oder spätestens ab diesem Datum nicht mehr funktionieren. Der Anbieter bemüht sich um einen Ersatz, schuldet ihn aber nicht. [PRÜFEN: Aussage anpassen, sobald ein Ersatz erscheint]
+- Die Anschlüsse an E-Mail-Dienste, KI-Anbieter, Todoist, Pushover und Kalender hängen von den Diensten Dritter ab, deren Bedingungen und Schnittstellen sich ändern können.
+- Die Installationsdateien sind nicht durch ein kostenpflichtiges Herstellerzertifikat von Apple oder Microsoft signiert. Ihr Betriebssystem zeigt deshalb eine Warnung. KERN prüft Updates anhand einer eigenen digitalen Signatur. [PRÜFEN: erst aufnehmen, wenn die Signaturprüfung umgesetzt ist]</p>
+<p>3.3 Soweit Sie dem zugestimmt haben, gelten die Ziffern 3.2 als vereinbart. Ihre gesetzlichen Rechte bei Mängeln im Übrigen bleiben unberührt.</p>
+<h2>4. Vertragsschluss</h2>
+<p>4.1 Die Darstellung auf der Webseite ist kein bindendes Angebot. Mit dem Klick auf die Schaltfläche "Zahlungspflichtig bestellen" geben Sie ein verbindliches Angebot ab. Der Vertrag kommt zustande, wenn der Anbieter Ihnen den Aktivierungscode per E-Mail sendet oder die Bestellung bestätigt.</p>
+<p>4.2 Vertragssprache ist Deutsch. Eine englische Übersetzung dient nur der Information.</p>
+<p>4.3 Der Anbieter sendet Ihnen die Vertragsbedingungen und die Widerrufsbelehrung mit der Bestätigung in Textform. Bitte speichern Sie sie.</p>
+<h2>5. Laufzeit, Preis, Zahlung</h2>
+<p>5.1 Preis: [PREIS] für eine Laufzeit von [12 Monaten] ab Aktivierung. [Wenn der Anbieter Kleinunternehmer ist:] Es wird gemäß § 19 UStG keine Umsatzsteuer berechnet. [Sonst: Der Preis enthält die gesetzliche Umsatzsteuer.]</p>
+<p>5.2 Zahlung: [ZAHLUNGSART]. Die Zahlung ist mit Vertragsschluss fällig.</p>
+<p>5.3 <strong>Die Lizenz verlängert sich nicht automatisch.</strong> Nach Ablauf endet der Vertrag, ohne dass Sie kündigen müssen. Eine Verlängerung ist ein neuer Kauf.</p>
+<p>5.4 Der Anbieter kann die Lizenz aus wichtigem Grund sperren, insbesondere bei Weitergabe des Aktivierungscodes über die vereinbarte Gerätezahl hinaus oder bei Rückbuchung der Zahlung. Er teilt Ihnen den Grund mit und gibt Ihnen, soweit zumutbar, vorher Gelegenheit zur Stellungnahme. Ihr gesetzliches Recht zur Kündigung aus wichtigem Grund bleibt unberührt.</p>
+<h2>6. Aktivierung und Prüfung</h2>
+<p>6.1 Zur Nutzung benötigen Sie den Aktivierungscode. Bei der Aktivierung und danach etwa alle 72 Stunden prüft KERN online die Gültigkeit der Lizenz. Ohne erfolgreiche Prüfung funktioniert KERN offline für höchstens 14 Tage weiter.</p>
+<p>6.2 Dabei werden die in der Datenschutzerklärung genannten Daten übertragen, jedoch keine Inhalte aus KERN.</p>
+<p>6.3 Die Zahl der Geräte ist auf [ein] Gerät begrenzt. Bei einem Gerätewechsel setzt der Anbieter auf Anfrage die Bindung zurück.</p>
+<h2>7. Nach Ablauf und bei Beendigung</h2>
+<p>7.1 Nach Ablauf der Laufzeit bleiben Ihre Daten auf Ihrem Gerät erhalten. Nach Ablauf der Lizenz bleibt KERN gesperrt, auf dem Entsperrbildschirm können Sie aber eine letzte Kopie Ihrer Daten herunterladen. Jede weitere Nutzung (Ansehen, Import, KI-Funktionen, Updates) setzt eine gültige Lizenz voraus. [Umgesetzt in PR #141: Abschlussexport auf dem Entsperrbildschirm.]</p>
+<p>7.2 Sichern Sie Ihre Daten regelmäßig. KERN legt beim Versionswechsel eine Sicherung an, ersetzt aber keine eigene Datensicherung.</p>
+<h2>8. Ihre Verantwortung</h2>
+<p>8.1 Sie sind für die Daten verantwortlich, die Sie in KERN speichern, und für die Rechtmäßigkeit Ihrer Ansprache von Personen. KERN versendet nie selbst E-Mails. Setzen Sie KERN nicht für unerlaubte Werbung, Belästigung oder Überwachung ein.</p>
+<p>8.2 Bei beruflicher oder geschäftlicher Nutzung können Sie Pflichten nach Datenschutzrecht gegenüber Ihren Kontakten haben (siehe Datenschutzerklärung, Abschnitt 10).</p>
+<p>8.3 Zugangsdaten und API-Schlüssel für Drittdienste verwalten Sie selbst. Für Kosten und Bedingungen dieser Dienste ist der jeweilige Anbieter zuständig.</p>
+<p>8.4 Der Aktivierungscode ist nur für Sie bestimmt. Eine Weitergabe, Vermietung oder Weiterveräußerung ist nicht erlaubt.</p>
+<h2>9. Mängelrechte</h2>
+<p>Es gelten die gesetzlichen Vorschriften über Verträge über digitale Produkte (§§ 327 ff. BGB). Der Anbieter stellt während der Laufzeit die Updates bereit, die zur Erhaltung der Vertragsmäßigkeit erforderlich sind. Sie sind verpflichtet, bereitgestellte Updates innerhalb angemessener Zeit zu installieren; unterlassen Sie dies, haftet der Anbieter nicht für daraus folgende Mängel, sofern er Sie auf das Update und die Folgen hingewiesen hat. Support erfolgt per E-Mail an [E-MAIL] nach Möglichkeit innerhalb von [fünf] Werktagen.</p>
+<h2>10. Haftung</h2>
+<p>10.1 Der Anbieter haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit, bei Verletzung von Leben, Körper oder Gesundheit, nach dem Produkthaftungsgesetz, bei arglistigem Verschweigen eines Mangels und bei Übernahme einer Garantie.</p>
+<p>10.2 Bei einfacher Fahrlässigkeit haftet der Anbieter nur bei Verletzung einer wesentlichen Vertragspflicht (Pflicht, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung Sie regelmäßig vertrauen dürfen), und dann begrenzt auf den bei Vertragsschluss vorhersehbaren, typischen Schaden.</p>
+<p>10.3 Für den Verlust von Daten haftet der Anbieter nach Ziffer 10.2 nur in Höhe des Aufwands, der bei regelmäßiger, gefahrentsprechender Sicherung der Daten durch Sie zur Wiederherstellung entstanden wäre.</p>
+<p>10.4 Die Haftung nach Ziffern 10.1 bis 10.3 gilt auch für Mitarbeiter und Erfüllungsgehilfen. Zwingende gesetzliche Haftung bleibt unberührt.</p>
+<h2>11. Open-Source-Komponenten</h2>
+<p>KERN enthält Open-Source-Komponenten unter eigenen Lizenzen. Die Hinweise finden Sie in der App unter "Open-Source-Lizenzen". Diese Bedingungen schränken Ihre Rechte aus diesen Lizenzen nicht ein.</p>
+<h2>12. Widerrufsrecht</h2>
+<p>Als Verbraucher haben Sie ein Widerrufsrecht. Die Einzelheiten finden Sie in der Widerrufsbelehrung. Bei Verträgen über digitale Inhalte erlischt es unter den dort genannten Voraussetzungen.</p>
+<h2>13. Anwendbares Recht, Gerichtsstand</h2>
+<p>13.1 Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Zwingende Verbraucherschutzvorschriften des Staates, in dem Sie Ihren gewöhnlichen Aufenthalt haben, bleiben unberührt.</p>
+<p>13.2 Für Streitigkeiten bleibt der gesetzliche Gerichtsstand zu Ihren Gunsten unberührt.</p>
+<p>13.3 Die Plattform der EU-Kommission zur Online-Streitbeilegung wurde eingestellt. Der Anbieter ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Optional, siehe Impressum]</p>
+<h2>14. Schlussbestimmungen</h2>
+<p>Ist eine Bestimmung unwirksam, bleibt der Vertrag im Übrigen wirksam; es gilt das Gesetz. Der Anbieter darf diese Bedingungen für laufende Verträge nur mit Ihrer Zustimmung ändern. Für neue Käufe gilt die jeweils aktuelle Fassung.</p>
+<p>Stand: [DATUM]</p>
+<nav><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="privacy.html">Privacy policy</a> · <a href="agb.html">Nutzungsbedingungen</a> · <a href="terms.html">Terms of use</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="withdrawal.html">Right of withdrawal</a><br><a href="../SECURITY.md">Security policy</a></nav></div></body></html>

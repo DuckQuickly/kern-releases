@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Right of withdrawal – KERN</title>
+<style>
+  :root {
+    --bg: #faf8f3; --surface: #fffdf8; --border: #e7e0d2;
+    --text: #2b2620; --muted: #8a8172; --accent: #4a7c59; --accent-dark: #3a6347;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #201d16; --border: #35301f;
+      --text: #ece6d8; --muted: #9a9080; --accent: #7bb389; --accent-dark: #6aa478;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 64px; }
+  header { text-align: center; margin-bottom: 40px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 15px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+    margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .mark span { width: 16px; height: 16px; border-radius: 4px; background: rgba(255,255,255,.85); }
+  h1 { font-size: 30px; letter-spacing: 4px; font-weight: 800; margin: 0 0 6px; }
+  .tagline { color: var(--muted); font-size: 15px; margin: 0; }
+  .version { display: inline-block; margin-top: 14px; font-size: 12.5px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 28px; }
+  @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+  }
+  .card.primary { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent), var(--shadow); }
+  .card-os { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .card-os svg { width: 22px; height: 22px; fill: var(--text); }
+  .card-note { color: var(--muted); font-size: 13px; margin: 0 0 16px; min-height: 36px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 600; font-size: 15px;
+    padding: 12px 16px; border-radius: 11px; transition: transform .08s, background .15s, opacity .15s;
+    background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.download { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn.download:hover { background: var(--accent-dark); }
+  .btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+  .best { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--accent); margin-left: auto; }
+  [hidden] { display: none !important; }
+  .checksum { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; word-break: break-all; }
+  .steps { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 4px 22px; box-shadow: var(--shadow); }
+  details { border-bottom: 1px solid var(--border); }
+  details:last-child { border-bottom: none; }
+  summary { cursor: pointer; padding: 16px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { margin-left: auto; transition: transform .15s; color: var(--muted); }
+  details[open] summary .chev { transform: rotate(90deg); }
+  .steps ol { margin: 0 0 18px; padding-left: 20px; color: var(--text); }
+  .steps li { margin-bottom: 8px; }
+  .steps code { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+  .foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 30px; line-height: 1.7; }
+  .foot a { color: var(--accent); text-decoration: none; }
+  .warn { background: color-mix(in srgb, #b7892a 12%, var(--surface)); border: 1px solid color-mix(in srgb, #b7892a 35%, var(--border));
+    color: var(--text); border-radius: 12px; padding: 12px 16px; font-size: 13px; margin-bottom: 24px; }
+
+.wrap{padding-top:32px} .legal h1{font-size:26px;letter-spacing:0} .legal h2{font-size:19px;margin-top:28px} .legal nav{font-size:13px;color:var(--muted);margin-top:40px;line-height:2} .legal a{color:var(--accent-dark)}</style></head>
+<body><div class="wrap legal"><p><a href="../index.html">← KERN</a></p>
+<h1>Withdrawal information, model form and checkout texts (English)</h1>
+<p><em>(Draft, 7 Oct 2026. Informational translation. The German text is the legally operative one for German-law consumer contracts and must match the statutory model; see <code>widerruf.de.md</code>.)</em></p>
+<h2>Right of withdrawal</h2>
+<p>You have the right to withdraw from this contract within fourteen days without giving any reason.</p>
+<p>The withdrawal period is fourteen days from the day of conclusion of the contract.</p>
+<p>To exercise the right of withdrawal you must inform us ([NAME], [ADDRESS], email: [EMAIL]) of your decision to withdraw by a clear statement (for example a letter sent by post or an email). You may use the model withdrawal form below, but you do not have to.</p>
+<p>To meet the withdrawal deadline, it is sufficient that you send your communication before the withdrawal period has expired.</p>
+<h2>Effects of withdrawal</h2>
+<p>If you withdraw from this contract, we shall reimburse all payments received from you without undue delay and no later than fourteen days from the day we receive notice of your withdrawal. We use the same means of payment you used for the original transaction unless expressly agreed otherwise. You will not be charged any fees for the reimbursement.</p>
+<h2>Early expiry of the right of withdrawal</h2>
+<p>For a contract for digital content not supplied on a tangible medium, your right of withdrawal also expires if we have started performance after you expressly agreed that we start before the withdrawal period ends, and you confirmed that you know you lose your right of withdrawal once performance starts.</p>
+<h2>Model withdrawal form</h2>
+<p>To [NAME], [ADDRESS], email [EMAIL]: I/We (<em>) hereby give notice that I/We (</em>) withdraw from my/our (<em>) contract for the supply of the following: licence for KERN. Ordered on (</em>) / received on (<em>): Name of consumer(s): Address of consumer(s): Signature (only if on paper): Date: (</em>) Delete as appropriate.</p>
+<h2>Checkout texts</h2>
+<p>Two separate boxes, not pre-ticked, both required to buy:</p>
+<p>☐ I expressly agree that [NAME] starts performing the contract before the withdrawal period ends by providing me the activation code and releasing the download.</p>
+<p>☐ I confirm that I know I lose my right of withdrawal once performance starts.</p>
+<p>Terms box:</p>
+<p>☐ I have read the [terms], the [withdrawal information] and the [privacy policy] and accept the terms.</p>
+<p>Button (the German wording "Zahlungspflichtig bestellen" is required for German consumers; the English equivalent is "Order with obligation to pay"):</p>
+<p>[ Order with obligation to pay ]</p>
+<p>Price line directly above the button: total [PRICE] [incl. VAT / no VAT charged under section 19 German VAT Act], term [12 months], no automatic renewal.</p>
+<nav><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a> · <a href="privacy.html">Privacy policy</a> · <a href="agb.html">Nutzungsbedingungen</a> · <a href="terms.html">Terms of use</a> · <a href="widerruf.html">Widerrufsbelehrung</a> · <a href="withdrawal.html">Right of withdrawal</a><br><a href="../SECURITY.md">Security policy</a></nav></div></body></html>
