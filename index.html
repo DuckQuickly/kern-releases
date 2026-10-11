@@ -114,7 +114,8 @@
       <ol>
         <li>Open the downloaded <code>.dmg</code>.</li>
         <li>Drag <strong>KERN</strong> onto the <strong>Applications</strong> folder.</li>
-        <li>Open KERN normally. Published builds are signed with a Developer ID and notarized by Apple. If macOS shows a warning anyway, do not open it and tell the owner.</li>
+        <li>Open KERN. macOS says it cannot verify the developer, because KERN is not notarized with a paid Apple certificate. This is expected.</li>
+        <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll down, choose <strong>Open Anyway</strong> next to KERN, then confirm. You only need to do this once for each version that macOS blocks.</li>
         <li>After that, KERN updates itself; your contacts, notes, and settings live outside the app and carry over.</li>
       </ol>
     </details>
@@ -130,6 +131,7 @@
 
   <p class="foot">
     Private beta · install only copies from the owner.<br>
+    <a href="legal/impressum.html">Impressum</a> · <a href="legal/datenschutz.html">Datenschutzerklärung</a> · <a href="legal/privacy.html">Privacy policy</a> · <a href="legal/terms.html">Terms of use</a><br>
     <a id="all-releases" href="https://github.com/DuckQuickly/kern-releases/releases">All versions &amp; checksums</a>
   </p>
 </div>
