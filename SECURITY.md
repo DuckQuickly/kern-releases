@@ -17,7 +17,7 @@ Include the KERN version, your operating system, what you did, what happened, an
 
 ## Scope
 
-In scope: the KERN apps for macOS and Windows, their updater, and the licence server run for KERN.
+In scope: the KERN app for macOS, its updater, and the licence server run for KERN.
 
 Out of scope: social engineering, physical attacks, denial of service against hosting providers, and issues in third-party services that KERN only connects to (report those to the provider).
 
