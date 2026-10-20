@@ -97,15 +97,6 @@
       <div class="checksum" id="sha-mac"></div>
     </div>
 
-    <div class="card" id="card-win">
-      <div class="card-os">
-        <svg viewBox="0 0 24 24"><path d="M3 5.5l7.5-1v7.2H3V5.5zm0 13l7.5 1v-7.1H3v6.1zM11.3 4.3L21 3v8.7h-9.7V4.3zm0 15.4L21 21v-8.6h-9.7v7.3z"/></svg>
-        Windows<span class="best" id="best-win" hidden>Your device</span>
-      </div>
-      <p class="card-note" id="note-win">Windows 10 or 11, 64-bit. Owner-approved beta testers only: this installer is not code-signed.</p>
-      <a class="btn download" id="dl-win" href="#" aria-disabled="true">Checking…</a>
-      <div class="checksum" id="sha-win"></div>
-    </div>
   </div>
 
   <div class="steps">
@@ -117,14 +108,6 @@
         <li>Open KERN. macOS says it cannot verify the developer, because KERN is not notarized with a paid Apple certificate. This is expected.</li>
         <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll down, choose <strong>Open Anyway</strong> next to KERN, then confirm. You only need to do this once for each version that macOS blocks.</li>
         <li>After that, KERN updates itself; your contacts, notes, and settings live outside the app and carry over.</li>
-      </ol>
-    </details>
-    <details id="steps-win">
-      <summary>Installing on Windows <span class="chev">›</span></summary>
-      <ol>
-        <li>Run the downloaded <code>.exe</code>.</li>
-        <li>Windows will say the publisher is unknown, because this beta installer is not code-signed. If the owner has not approved you for the Windows beta, do not install it.</li>
-        <li>Your data is stored in your user profile and survives updates — just run the newer installer.</li>
       </ol>
     </details>
   </div>
@@ -169,7 +152,7 @@
 
   function highlight() {
     if (isMac) { document.getElementById("card-mac").classList.add("primary"); document.getElementById("best-mac").hidden = false; document.getElementById("steps-mac").open = true; }
-    else if (isWin) { document.getElementById("card-win").classList.add("primary"); document.getElementById("best-win").hidden = false; document.getElementById("steps-win").open = true; }
+    else if (isWin) { document.getElementById("note-mac").textContent = "KERN runs on macOS only. There is no Windows version."; }
   }
 
   fetch("https://api.github.com/repos/" + REPO + "/releases/latest", { headers: { "Accept": "application/vnd.github+json" } })
@@ -179,18 +162,15 @@
       document.getElementById("version").textContent = "Latest: " + (rel.name || rel.tag_name || "");
       document.getElementById("all-releases").href = "https://github.com/" + REPO + "/releases";
       var mac = pick(assets, /^KERN-macOS-.*\.dmg$/i);
-      var win = pick(assets, /^KERN-Setup-.*\.exe$/i);
       setBtn("dl-mac", mac, "Download for Mac");
-      setBtn("dl-win", win, "Download for Windows");
       sha("sha-mac", mac, assets);
-      sha("sha-win", win, assets);
       if (!mac) document.getElementById("note-mac").textContent = "macOS build publishing soon.";
       highlight();
     })
     .catch(function () {
       document.getElementById("version").textContent = "";
       document.getElementById("notice").innerHTML = '<div class="warn">Could not load the latest release automatically. Visit the <a href="https://github.com/' + REPO + '/releases">releases page</a> to download.</div>';
-      setBtn("dl-mac", null); setBtn("dl-win", null);
+      setBtn("dl-mac", null);
       highlight();
     });
 })();
